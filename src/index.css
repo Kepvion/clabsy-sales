@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #faf8f5;
+    color: #1c1917;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: -0.011em;
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Luxury Editorial & Serif Font Classes */
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Garamond, Georgia, serif;
+}
+
+.font-display {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+/* Custom premium scrollbar - warm stone theme */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f2eb;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6cfc4;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8ad9e;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Luxury Developer Card Tokens */
+.enterprise-card {
+  background: #ffffff;
+  border: 1px solid #ebe6df;
+  border-radius: 0.875rem;
+  box-shadow: 0 1px 3px 0 rgba(28, 25, 23, 0.03), 0 1px 2px -1px rgba(28, 25, 23, 0.02);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.enterprise-card:hover {
+  border-color: #d6cfc4;
+  box-shadow: 0 6px 16px -2px rgba(28, 25, 23, 0.06), 0 2px 4px -2px rgba(28, 25, 23, 0.03);
+}
+
+.premium-card {
+  background: #ffffff;
+  border: 1px solid #ebe6df;
+  border-radius: 0.875rem;
+  box-shadow: 0 1px 3px 0 rgba(28, 25, 23, 0.03), 0 1px 2px -1px rgba(28, 25, 23, 0.02);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.premium-card:hover {
+  border-color: #d6cfc4;
+  box-shadow: 0 6px 16px -2px rgba(28, 25, 23, 0.06), 0 2px 4px -2px rgba(28, 25, 23, 0.03);
+}
+
+/* Champagne Gold & Bronze Accents */
+.badge-gold {
+  background: #faf5ee;
+  color: #8c6832;
+  border: 1px solid #ecd8bd;
+}
+
+.badge-forest {
+  background: #f1f6f3;
+  color: #1e3f20;
+  border: 1px solid #cfded4;
+}
+
+/* Glassmorphism accents - warm luxury */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid #ebe6df;
+}
+
+.glass-panel-dark {
+  background: rgba(20, 20, 22, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #2e2b27;
+}
+
+/* Tabular figures for financial and numerical precision */
+.num-tabular {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Architectural CAD styling - warm linen parchment drafting */
+.cad-grid-light {
+  background-color: #f7f4ed;
+  background-size: 22px 22px;
+  background-image: 
+    linear-gradient(to right, rgba(214, 207, 196, 0.6) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(214, 207, 196, 0.6) 1px, transparent 1px);
+}
+
+.cad-grid {
+  background-color: #18181b;
+  background-size: 22px 22px;
+  background-image: 
+    linear-gradient(to right, rgba(63, 63, 70, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(63, 63, 70, 0.4) 1px, transparent 1px);
+}
+
+/* Road avenue divider markings */
+.road-divider {
+  background-image: linear-gradient(to right, #b8ad9e 50%, transparent 50%);
+  background-size: 14px 1.5px;
+  background-repeat: repeat-x;
+}
+
+.road-divider-yellow {
+  background-image: linear-gradient(to right, #c5a880 50%, transparent 50%);
+  background-size: 16px 2px;
+  background-repeat: repeat-x;
+}
+
+/* Print optimizations for Allotment letter */
+@media print {
+  body {
+    background: white !important;
+  }
+  aside, header, footer, button {
+    display: none !important;
+  }
+}
